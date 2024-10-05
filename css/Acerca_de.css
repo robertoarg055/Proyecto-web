@@ -1,0 +1,219 @@
+
+
+section.cuerpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+}
+
+article.Informacion{
+    display: flex;
+    flex-wrap: wrap;   
+    width: 100%;
+}
+
+article.Informacion h1{
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    color: rgb(63, 113, 252);
+}
+
+div.caja{
+    background-color: rgb(255, 254, 239);
+    border: 2px solid black;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+div.caja img{
+    border: 1px solid black;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #ffd700;
+    --text-color: #666;
+    --background-color: #f5f5f5;
+    --white: #fff;
+    --shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1:first-child {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+body, html {
+    font-family: 'Didact Gothic', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.cta-button, .button-yellow, .button-blue {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button, .button-blue {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.button-yellow {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.cta-button:hover, .button-blue:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.button-yellow:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.hero-content, .hero-image {
+    flex: 1 1 300px;
+}
+
+.hero h1 {
+    color: var(--primary-color);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 1.5rem;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 160px;
+    box-shadow: var(--shadow);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--background-color);
+}
+
+.dropdown-content a img {
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-content, .hero-image {
+        padding-right: 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
